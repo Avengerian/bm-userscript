@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BM
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      1.0
 // @description  Modifies the rcon panel for battlemetrics to help color code important events and details about players.
 // @author       TempusOwl
 // @match        https://www.battlemetrics.com/rcon*
