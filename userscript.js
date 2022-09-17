@@ -2,7 +2,7 @@
 // @name         BM
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Changes the color of css classes for triggers used in BM.
+// @description  Modifies the rcon panel for battlemetrics to help color code important events and details about players.
 // @author       TempusOwl
 // @match        https://www.battlemetrics.com/rcon*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
