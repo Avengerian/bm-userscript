@@ -41,7 +41,7 @@ setInterval(function runAdmin() {
 }, 375)
 
 
-setInterval(function runTest() {
+setInterval(function runClan() {
     var b = false;
     var i = false;
     b = document.getElementsByClassName('css-mjpog7');
