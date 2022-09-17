@@ -22,5 +22,5 @@ Once you downloaded the extension to your browser, locate it at the upper right 
   * The second part “runSquadLead” checks for any user containing “Squad Leader” in the “small text-muted'” class. If it sees it, it turns the text element gold. 
   * The third part “runAdmin” checks the class “css-18s4qom” for containing the word “Admin” and turns them green. This helps see admins at a glance. 
   * The four part “runClan” checks the class “css-mjpog7” for containing our clan tag (change it yours) and changes the color of the name within rcon. If you clan only has one tag, you can remove the else if section. 
-  * Important: The classes may change as battlemetrics gets updated. Your classes (may) be different than mine. You can use inspect element to find the classes and replace mine to have the code function as you want. 
+  * Important: The classes may change as battlemetrics gets updated. Your classes (may) be different than mine. You can use inspect element to find the classes and replace mine to have the code function as you want using the folder with the images as a guide.
   
