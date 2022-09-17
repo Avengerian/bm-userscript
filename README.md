@@ -10,7 +10,7 @@ https://www.tampermonkey.net/ (I recommend Stable)
 ## Triggers I Use
 You click the URL, then scroll down to the bottom and create trigger. Do not modify them.
 
-Note: These only apply to the game Squad, and may not work for at all in other games.
+Note: These only apply to the game Squad, and may not work at all in other games.
 * https://www.battlemetrics.com/rcon/triggers/add?trigger=%7B%22types%22%3A%5B%22squad%3AteamKill%22%5D%2C%22personal%22%3Atrue%2C%22condition%22%3A%7B%22and%22%3A%5B%7B%22operand%22%3A%22player.online%22%2C%22operator%22%3A%22eq%22%2C%22value%22%3Atrue%7D%5D%7D%2C%22rateLimits%22%3Anull%2C%22inputs%22%3A%5B%5D%2C%22logCondition%22%3Atrue%2C%22actions%22%3A%5B%7B%22id%22%3A%22O63D4Hy24Q%22%2C%22command%22%3A%22tagMessage%22%2C%22gameId%22%3Anull%2C%22options%22%3A%7B%22tag%22%3A%22Teamkill%22%2C%22color%22%3A%22%23f500ff%22%7D%2C%22order%22%3A0%2C%22condition%22%3Anull%2C%22showResult%22%3Afalse%7D%5D%2C%22actionIds%22%3A%5B%22O63D4Hy24Q%22%5D%7D
 * https://www.battlemetrics.com/rcon/triggers/add?trigger=%7B%22types%22%3A%5B%22playerMessage%22%5D%2C%22personal%22%3Atrue%2C%22condition%22%3A%7B%22and%22%3A%5B%7B%22operand%22%3A%22msg.body%22%2C%22operator%22%3A%22match%22%2C%22value%22%3A%22admin%22%7D%5D%7D%2C%22rateLimits%22%3Anull%2C%22inputs%22%3A%5B%5D%2C%22logCondition%22%3Atrue%2C%22actions%22%3A%5B%7B%22id%22%3A%22At5MI5oL5%22%2C%22command%22%3A%22tagMessage%22%2C%22gameId%22%3Anull%2C%22options%22%3A%7B%22tag%22%3A%22admin%22%2C%22color%22%3A%22%2300ff1c%22%7D%2C%22order%22%3A0%2C%22condition%22%3Anull%2C%22showResult%22%3Afalse%7D%5D%2C%22actionIds%22%3A%5B%22At5MI5oL5%22%5D%7D
 
