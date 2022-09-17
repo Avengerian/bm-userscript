@@ -8,10 +8,10 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        GM_addStyle
 // ==/UserScript==
-GM_addStyle(".css-1qmad0a {background-color: rgb(159 0 255 / 11%);width: 1920px;pointer-events: none;}");
-GM_addStyle(".css-1rwnm41 {background-color: rgb(255 0 0 / 5%); width: 1920px;pointer-events: none;}");
-GM_addStyle(".css-ipu2vg {background-color: rgb(16 255 0 / 11%); width: 1920px;pointer-events: none;}");
-GM_addStyle(".css-gioqk9 {background-color: rgb(0 241 255 / 11%); width: 1920px;pointer-events: none;}");
+GM_addStyle(".css-1qmad0a {background-color: rgb(159 0 255 / 11%);width: 1920px;}");
+GM_addStyle(".css-1rwnm41 {background-color: rgb(255 0 0 / 5%); width: 1920px;}");
+GM_addStyle(".css-ipu2vg {background-color: rgb(16 255 0 / 11%); width: 1920px;}");
+GM_addStyle(".css-gioqk9 {background-color: rgb(0 241 255 / 11%); width: 1920px;}");
 GM_addStyle(".css-ym7lu8 {z-index: 2;}");
 
 
