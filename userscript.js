@@ -14,7 +14,6 @@ GM_addStyle(".css-ipu2vg {background-color: rgb(16 255 0 / 11%); width: 1920px;}
 GM_addStyle(".css-gioqk9 {background-color: rgb(0 241 255 / 11%); width: 1920px;}");
 GM_addStyle(".css-ym7lu8 {z-index: 2;}");
 
-
 setInterval(function runSquadLead() {
     var b = false;
     var i = false;
@@ -38,7 +37,6 @@ setInterval(function runAdmin() {
         }
     }
 }, 375)
-
 
 setInterval(function runClan() {
     var b = false;
