@@ -22,7 +22,6 @@ setInterval(function runSquadLead() {
     console.log(b)
     for (i = 0; i < b.length; i++) {
         if ((b[i].innerText == "Squad Leader")){
-                console.log(b)
             b[i].style.color = "#ffba23"
         }
     }
