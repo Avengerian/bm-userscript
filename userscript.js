@@ -73,5 +73,5 @@ setInterval(function runAdmin() {
 
         span.replaceWith(a)
     })
-}, 250)
+}, 500)
 
