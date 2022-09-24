@@ -14,6 +14,7 @@ GM_addStyle(".css-ipu2vg {background-color: rgb(16 255 0 / 11%); width: 1920px;}
 GM_addStyle(".css-gioqk9 {background-color: rgb(0 241 255 / 11%); width: 1920px;}");
 GM_addStyle(".css-ym7lu8 {z-index: 2;}");
 
+
 setInterval(function runSquadLead() {
     var b = false;
     var i = false;
@@ -24,7 +25,7 @@ setInterval(function runSquadLead() {
             b[i].style.color = "#ffba23"
         }
     }
-}, 375)
+}, 250)
 
 setInterval(function runAdmin() {
     var b = false;
@@ -36,7 +37,8 @@ setInterval(function runAdmin() {
             b[i].style.fontWeight = "bold"
         }
     }
-}, 375)
+}, 250)
+
 
 setInterval(function runClan() {
     var b = false;
@@ -50,7 +52,21 @@ setInterval(function runClan() {
             b[i].style.color = "darkturquoise"
         }
     }
-}, 375)
+}, 250)
 
+setInterval(function runAdmin() {const spans = document.querySelectorAll('.css-q39y9k')
 
+spans.forEach(span => {
+  const steamID = span.title /* or span.textContent */
+
+  const a = document.createElement('a')
+
+  ;[...span.attributes].forEach(attr => a.attributes.setNamedItem(attr.cloneNode()))
+
+  a.href = `https://communitybanlist.com/search/${steamID}`
+  a.innerHTML = steamID
+
+  span.replaceWith(a)
+})
+}, 250)
 
