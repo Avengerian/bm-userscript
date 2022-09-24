@@ -8,13 +8,16 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        GM_addStyle
 // ==/UserScript==
+
+// Changes the CSS color for the activity log, to make full colored bars instead of small colored tags. Updates on refresh.
 GM_addStyle(".css-1qmad0a {background-color: rgb(159 0 255 / 11%);width: 1920px;}");
 GM_addStyle(".css-1rwnm41 {background-color: rgb(255 0 0 / 5%); width: 1920px;}");
 GM_addStyle(".css-ipu2vg {background-color: rgb(16 255 0 / 11%); width: 1920px;}");
 GM_addStyle(".css-gioqk9 {background-color: rgb(0 241 255 / 11%); width: 1920px;}");
+// The z-index prevents above the backgrounds breaking clickablity when running over the text. Updates on refresh.
 GM_addStyle(".css-ym7lu8 {z-index: 2;}");
 
-
+// Highlights the squad leader text box as a golden color @ 250ms updates.
 setInterval(function runSquadLead() {
     var b = false;
     var i = false;
@@ -27,6 +30,7 @@ setInterval(function runSquadLead() {
     }
 }, 250)
 
+// Highlights the Admin User text box as a green color @ 250ms updates.
 setInterval(function runAdmin() {
     var b = false;
     var i = false;
@@ -39,7 +43,7 @@ setInterval(function runAdmin() {
     }
 }, 250)
 
-
+// Highlights the Admin User text box as a green color @ 250ms updates.
 setInterval(function runClan() {
     var b = false;
     var i = false;
@@ -54,19 +58,20 @@ setInterval(function runClan() {
     }
 }, 250)
 
-setInterval(function runAdmin() {const spans = document.querySelectorAll('.css-q39y9k')
+// Adds a clickable URL to steamIDs that bring you to communty ban list. Updates @ 250ms.
+setInterval(function runAdmin() {
+    const spans = document.querySelectorAll('.css-q39y9k')
+    spans.forEach(span => {
+        const steamID = span.title /* or span.textContent */
 
-spans.forEach(span => {
-  const steamID = span.title /* or span.textContent */
+        const a = document.createElement('a')
 
-  const a = document.createElement('a')
+        ;[...span.attributes].forEach(attr => a.attributes.setNamedItem(attr.cloneNode()))
 
-  ;[...span.attributes].forEach(attr => a.attributes.setNamedItem(attr.cloneNode()))
+        a.href = `https://communitybanlist.com/search/${steamID}`
+        a.innerHTML = steamID
 
-  a.href = `https://communitybanlist.com/search/${steamID}`
-  a.innerHTML = steamID
-
-  span.replaceWith(a)
-})
+        span.replaceWith(a)
+    })
 }, 250)
 
