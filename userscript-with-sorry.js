@@ -53,6 +53,7 @@ setInterval(function jobTwo() {
         "E10",
         "Tiberius",
         "Nostradumbass",
+        "Θscar Mike",
         "TexasForever22",
         /*Server Admins*/
         "Avengerian",
