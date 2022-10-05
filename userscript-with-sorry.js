@@ -116,11 +116,17 @@ setInterval(function jobTwo() {
 
     const wordSorry = [
         "sorry",
+        "sorrie",
+        "sorries",
         "SORRY",
         "SORRIE",
         "SORRIES",
         "srry",
+        "SRRY",
         "for tk",
+        "FOR TK",
+        "TK",
+        "tk",
         "for teamkill",
         "My Bad",
         "My bad",
