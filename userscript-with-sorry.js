@@ -442,25 +442,6 @@ setInterval(function jobTwo() {
     }
 }, 25)
 
-
-// Adds a clickable URL to steamIDs that bring you to communty ban list. Updates @ 250ms.
-setInterval(function runAdmin() {
-    const spans = document.querySelectorAll('.css-q39y9k')
-    spans.forEach(span => {
-        const steamID = span.title /* or span.textContent */
-
-        const a = document.createElement('a')
-
-        ;[...span.attributes].forEach(attr => a.attributes.setNamedItem(attr.cloneNode()))
-
-        a.href = `https://communitybanlist.com/search/${steamID}`
-        a.innerHTML = steamID
-
-        span.replaceWith(a)
-    })
-}, 800)
-}, 25)
-
 // Adds a clickable URL to steamIDs that bring you to communty ban list. Updates @ 250ms.
 setInterval(function runAdmin() {
     const spans = document.querySelectorAll('.css-q39y9k')
