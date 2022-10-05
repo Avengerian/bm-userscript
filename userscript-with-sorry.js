@@ -50,6 +50,7 @@ setInterval(function jobTwo() {
         "Shaka",
         /*Directors / Assists*/
         "Brennan",
+        "Captain Crossbones",
         "E10",
         "Tiberius",
         "Nostradumbass",
@@ -58,7 +59,6 @@ setInterval(function jobTwo() {
         /*Server Admins*/
         "Avengerian",
         "Basey",
-        "Captain Crossbones",
         "El 24 throttle4u",
         "gnome saiya",
         "Gilly",
