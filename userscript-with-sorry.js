@@ -47,6 +47,7 @@ setInterval(function jobTwo() {
         /*Advisors*/
         "Basa (Doc)",
         "CeeJay",
+        "Shaka",
         /*Directors / Assists*/
         "Brennan",
         "E10",
