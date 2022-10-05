@@ -8,9 +8,12 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=battlemetrics.com
 // @grant        GM_addStyle
 // ==/UserScript==
+
 var b = false
 var c = false
 var i = false
+
+// Colors starting with # are known as "HEX" colors. https://htmlcolorcodes.com/color-picker/
 var colorMissingKit = "#C1766E"
 var colorTeamBluefor = "#FF9F32"
 var colorTeamOpfor = "#FFF200"
