@@ -242,4 +242,3 @@ setInterval(function runAdmin() {
         span.replaceWith(a)
     })
 }, 800)
-}, 25)
