@@ -125,8 +125,6 @@ setInterval(function jobTwo() {
         "SRRY",
         "for tk",
         "FOR TK",
-        "TK",
-        "tk",
         "for teamkill",
         "My Bad",
         "My bad",
