@@ -3,11 +3,16 @@ This is simple userscript that takes advantage of custom triggers you may have c
 Note this code is intended for the BattleMetrics RCON product, used by server admins. Not to be confused with the standard BattleMetrics server list. 
 
 ## Features Of This Userscript
-* Highlights Squad Leaders in RCON.
-* Highlights Admin in RCON.
-* Adds full width colored bars to activity view (w/ help from BM trigger tag)
-* Adds a clickable link for SteamID that go to communitybanlist.com/<theSteamid>
+* Highly customizable!
+* Grays out unimportant events like joins/leaves (customizable)
+* Adds full width colored bars for teamkills (w/ help from a BM trigger tag)
+* Adds a clickable link for SteamID that goes to the communitybanlist.com/<theSteamid>
 * Highlights users with clan tags (if BM decides to displays it)
+* Highlights Squad Leaders in RCON side panel.
+* Highlights BM Admins in RCON player side panel.
+* Highlights Admins in activity side panel.
+* Highlights Sorry For TK (optional userscript).
+* Highlights moderation events in red.
 
 ![how the results look](https://github.com/TempusOwl/bm-userscript/blob/main/result.png?raw=true)
 ## What Is TamperMonkey
@@ -26,11 +31,4 @@ Note: These only apply to the game Squad, and may not work at all in other games
 * Create a new script, this will open new tab. Replace EVERYTHING within it with the userscript.js found here, then press CTRL+S.
 * Go the BM website and it should show as a red +1 next to TamperMonkey icon, if the script is working. 
 * If you see no +1 in Red, you may need to toggle the script on, head back to the browser icon for TamperMonkey and check that your script is enabled.
-
-## Understanding The Code
-  * The top of the code makes use of the triggers you can create within battlemetrics, it modifies the “Tag” you can place on certain lines. In my case it will show teamkills as purple. It does this by expanding the size of the small little 2px colored tag, and makes it full width. If you can’t apply a tag to a trigger, your trigger may not support tagging messages in rcon (check BattleMetrics discord).
-  * The second part “runSquadLead” checks for any user containing “Squad Leader” in the “small text-muted'” class. If it sees it, it turns the text element gold. 
-  * The third part “runAdmin” checks the class “css-18s4qom” for containing the word “Admin” and turns them green. This helps see admins at a glance. 
-  * The four part “runClan” checks the class “css-mjpog7” for containing our clan tag (change it yours) and changes the color of the name within rcon. If you clan only has one tag, you can remove the else if section. 
-  * Important: The classes may change as battlemetrics gets updated. Your classes (may) be different than mine. You can use inspect element to find the classes and replace mine to have the code function as you want using the folder with the images as a guide. Lastly the update rate is 375 (miliseconds) you can change this as you wish by editing the last number in the functions which is 375. I do not recommend going below 100ms.
   
