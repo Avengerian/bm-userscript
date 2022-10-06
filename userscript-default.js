@@ -114,24 +114,6 @@ setInterval(function jobTwo() {
         "Irregular Militia Forces",
     ]
 
-    const wordSorry = [
-        "sorry",
-        "sorrie",
-        "sorries",
-        "SORRY",
-        "SORRIE",
-        "SORRIES",
-        "srry",
-        "SRRY",
-        "for tk",
-        "FOR TK",
-        "for teamkill",
-        "My Bad",
-        "My bad",
-        "My bad",
-        "my bad",
-    ]
-
     //====================================== Do not edit the code below - it may break things!  ======================================
 
     // Message Coloring Activity Moderation
@@ -156,13 +138,6 @@ setInterval(function jobTwo() {
             b[i].style.color = colorBattlemetricsAdmin
         }
     }
-
-    // For TKs Sorry Messages
-      messageActivity.forEach(element => {
-        if (wordSorry.some(phrase => element.textContent.includes(phrase))) {
-            element.style.color = colorTeamkillAction
-        }
-    })
 
     // Action List Red Highlight (ban, warn, kick)
     messageActivity.forEach(element => {
