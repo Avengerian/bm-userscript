@@ -14,14 +14,14 @@ var c = false
 var i = false
 
 // Colors starting with # are known as "HEX" colors. https://htmlcolorcodes.com/color-picker/
-var colorMissingKit = "#C1766E"
-var colorTeamBluefor = "#FF9F32"
-var colorTeamOpfor = "#FFF200"
-var colorAdminName = "#55f1ff"
+var colorMissingKit = "#C1766E" //Beige
+var colorTeamBluefor = "#FF9F32" //Orange
+var colorTeamOpfor = "#FFF200" //Yellow
+var colorAdminName = "#55f1ff" //Cyan
 var colorGrayedOut = "gray"
 var colorBattlemetricsAdmin = "lime"
-var colorModerationAction = "#ff3333"
-var colorTeamkillAction = "#FF97FC"
+var colorModerationAction = "#ff3333" //Red
+var colorTeamkillAction = "#FF97FC" //Light Purple
 
 // Changes the teamkill color tag background
 GM_addStyle(".css-1qmad0a {background-color: rgb(159 0 255 / 11%);width: 1920px;}");
@@ -114,6 +114,15 @@ setInterval(function jobTwo() {
         "Irregular Militia Forces",
     ]
 
+    const wordSorry = [
+        "sorry",
+        "sorrie",
+        "srry",
+        "for tk",
+        "for teamkill",
+        "My Bad",
+    ]
+
     //====================================== Do not edit the code below - it may break things!  ======================================
 
     // Message Coloring Activity Moderation
@@ -139,54 +148,61 @@ setInterval(function jobTwo() {
         }
     }
 
+    // For TKs Sorry Messages
+      messageActivity.forEach(element => {
+        if (wordSorry.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
+            element.style.color = colorTeamkillAction
+        }
+    })
+
     // Action List Red Highlight (ban, warn, kick)
     messageActivity.forEach(element => {
-        if (actionList.some(phrase => element.textContent.includes(phrase))) {
+        if (actionList.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorModerationAction
         }
     })
 
     // Grayed Out Phrases
     messageActivity.forEach(element => {
-        if (grayedOutPhrases.some(phrase => element.textContent.includes(phrase))) {
+        if (grayedOutPhrases.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorGrayedOut
         }
     })
 
     // Searches and highlight the names of admins for players and activity sections.
     messageActivity.forEach(element => {
-        if (teamBluefor.some(phrase => element.textContent.includes(phrase))) {
+        if (teamBluefor.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorTeamBluefor
         }
     })
 
     messageActivity.forEach(element => {
-        if (teamOpfor.some(phrase => element.textContent.includes(phrase))) {
+        if (teamOpfor.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorTeamOpfor
         }
     })
 
     // ================ Admin / Mod List ========================
     namePlayers.forEach(element => {
-        if (adminList.some(phrase => element.textContent.includes(phrase))) {
+        if (adminList.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorAdminName
         }
     })
 
     nameActivity.forEach(element => {
-        if (adminList.some(phrase => element.textContent.includes(phrase))) {
+        if (adminList.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorAdminName
         }
     })
 
     namePlayers.forEach(element => {
-        if (modList.some(phrase => element.textContent.includes(phrase))) {
+        if (modList.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorAdminName
         }
     })
 
     nameActivity.forEach(element => {
-        if (modList.some(phrase => element.textContent.includes(phrase))) {
+        if (modList.some(phrase => element.textContent.toLowerCase().includes(phrase))) {
             element.style.color = colorAdminName
         }
     })
